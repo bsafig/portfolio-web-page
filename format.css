@@ -132,13 +132,65 @@ footer {
 }
 
 
-/* Show the dropdown on hover */
+/* Show the dropdown on hover and hold for click */
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 .dropdown:hover .dropbtn {
+    background-color: #2b61d6;
+    color: white;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+
+/* back to top button */
+
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #104f82;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-to-top-btn:hover {
+    background: #2b61d6;
+}
+
+
+/* Contact section buttons */
+
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    margin-top: 15px;
+}
+
+#emailBtn,
+#linkedinBtn {
+    background-color: #b7e1f7;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.email:hover #emailBtn,
+.linkedin:hover #linkedinBtn {
     background-color: #2b61d6;
     color: white;
 }

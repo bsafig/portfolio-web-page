@@ -55,6 +55,7 @@ h3 {
     align-items: center;
     margin-left: 15%;
     margin-right: 15%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -99,6 +100,7 @@ footer {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -187,10 +189,57 @@ footer {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .email:hover #emailBtn,
 .linkedin:hover #linkedinBtn {
+    background-color: #2b61d6;
+    color: white;
+}
+
+
+/* Floating navigation menu */
+
+.nav-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 155px;
+    right: 10px;
+    background-color: #6c7b9c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 150px;
+}
+
+
+/* Navigation buttons */
+
+#nav-linktree,
+#nav-about,
+#nav-experience,
+#nav-skills,
+#nav-projects,
+#nav-contact {
+    background-color: #b7e1f7;
+    color: black;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#nav-linktree:hover,
+#nav-about:hover,
+#nav-experience:hover,
+#nav-skills:hover,
+#nav-projects:hover,
+#nav-contact:hover {
     background-color: #2b61d6;
     color: white;
 }

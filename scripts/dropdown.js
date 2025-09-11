@@ -1,5 +1,7 @@
 // code for dropdown menu on landing page
 
+console.log("dropdown.js loaded");
+
 const dropdown = document.querySelector('.dropdown');
 const button = dropdown.querySelector('.dropbtn');
 

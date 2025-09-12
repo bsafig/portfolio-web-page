@@ -9,6 +9,10 @@ const navSkillsBtn = document.getElementById("nav-skills");
 const navProjectsBtn = document.getElementById("nav-projects");
 const navContactBtn = document.getElementById("nav-contact");
 
+// bootstrap tab buttons
+const experienceTab = document.getElementById("experience-tab");
+const skillsTab = document.getElementById("skills-tab");
+
 navLinktreeBtn.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
@@ -24,11 +28,13 @@ navAboutBtn.addEventListener("click", () => {
 navExperienceBtn.addEventListener("click", () => {
     const experienceSkillsSection = document.getElementById("experience-skills");
     experienceSkillsSection.scrollIntoView({ behavior: 'smooth' });
+    experienceTab.click();
 });
 
 navSkillsBtn.addEventListener("click", () => {
     const experienceSkillsSection = document.getElementById("experience-skills");
     experienceSkillsSection.scrollIntoView({ behavior: 'smooth' });
+    skillsTab.click();
 });
 
 navProjectsBtn.addEventListener("click", () => {

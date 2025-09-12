@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello World!!</title>
     <link rel="stylesheet" href="format.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -26,28 +28,115 @@
 
         <div class="hero-content">
             <div class="hero-img">
-                <img src="/meta/BP1.jpg" alt="Photo of Benedikt Safigan" width="300">
+                <img src="/meta/BP1.jpg" alt="Photo of Benedikt Safigan">
             </div>
             <div class="hero-txt">
                 <p>
-                    Hello, my name is Benedikt Safigan, and I am an aspiring software architect and engineer studying at the University of Colorado Boulder. My current focus includes Python, SQL, machine learning, and web development, while my foundation is built on experience
-                    with C, C++, and Java. Outside of coursework, I enjoy applying my skills to practical projects—most recently, I am planning an embedded software project to develop a sprinkler system for my family. I am actively seeking an internship
-                    opportunity where I can contribute, grow, and continue building my expertise. If you’d like to connect, please feel free to <a href="#contact">reach out here</a>.
+                    Hello, my name is Benedikt Safigan, and I am an driven future software architect and engineer studying at the University of Colorado Boulder. My current focus includes Python, SQL, machine learning, and web development, while my foundation is built on
+                    experience with C, C++, and Java. Outside of coursework, I enjoy applying my skills to practical projects—most recently, I am planning an embedded software project to develop a sprinkler system for my family. I am actively seeking
+                    an internship opportunity where I can contribute, grow, and continue building my expertise. If you’d like to connect, please feel free to <a href="#contact">reach out here</a>.
                 </p>
             </div>
         </div>
     </header>
 
     <section id="experience-skills">
-        <h2>this is where experience and skills will go in the future</h2>
+
+        <!-- Bootstrap implementation of interactive window -->
+        <div class="interactive-window">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience-panel" type="button" role="tab">Experience</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills-panel" type="button" role="tab">Skills</button>
+                </li>
+            </ul>
+
+            <div class="tab-content p-3 border border-top-0" id="myTabContent">
+                <div class="tab-pane fade show active" id="experience-panel" role="tabpanel">
+                    <h3>My Work Experience and History</h3>
+                    <h4>Professional Experience</h4>
+
+                    <h5>Exact Assembly</h5>
+                    <p><em>Software Engineering Intern</em></p>
+                    <p><em>May-Aug 2023</em></p>
+                    <ul>
+                        <li>Collaborated with a team to develop software solutions for a tech contracting startup.</li>
+                        <li>Assisted in troubleshooting and debugging software applications.</li>
+                        <li>Gained hands-on experience in software engineering and development processes.</li>
+                    </ul>
+
+                    <h4>Related Experience</h4>
+
+                    <h5>VARSITY FIRST Robotics Team 2996</h5>
+                    <p><em>Programmer, competition / field technician</em></p>
+                    <p><em>Aug 2021-May 2024</em></p>
+                    <p>Served as a software engineer and competition technician as a member of the drive team.</p>
+                    <ul>
+                        <li>Managed projects with a team of five developers in a short time window of six weeks.</li>
+                        <li>Wrote, tested, simulated, and debugged code.</li>
+                        <li>Prepared the robot for match play in high-pressure situations at competition.</li>
+                    </ul>
+
+                </div>
+                <div class="tab-pane fade" id="skills-panel" role="tabpanel">
+                    <h3>My Skills</h3>
+
+                    <h5>Technical Skills</h5>
+
+                    <ul>
+                        <li>Git</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>Software Construction</li>
+                        <li>Software Design</li>
+                        <li>Software Development</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>Secure Shell</li>
+                        <li>GNU Debugger</li>
+                        <li>Hardware Architecture</li>
+                    </ul>
+
+                    <h5>Organizational Skills</h5>
+
+                    <ul>
+                        <li>Agile Methodologies</li>
+                        <li>Project Planning</li>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Time Management</li>
+                        <li>Problem Solving</li>
+                        <li>Spanish</li>
+                    </ul>
+
+                    <h6><em><a href="https://www.linkedin.com/in/benedikt-safigan-cu/details/skills" target="_blank">View skills page of LinkedIn for additional skill context</a></em></h6>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
     <section id="projects">
         <h2>Featured Project</h2>
         <h3><a href="https://github.com/bsafig/portfolio-web-page" target="_blank">Website Project</a></h3>
         <p>
-            This is the project repo for the website that you're currently viewing. I used this project to practice web development methods and tools while also giving me a great portfolio piece. I use HTML, CSS, CPanel, JavaScript, and SSH with remote servers to
-            host the files in the Git repo.
+            This is the project repo for the website that you're currently viewing. I used this project to practice web development methods and tools while also giving me a great portfolio piece. I learned a lot about web development from this project - from interfacing
+            with the Bootsrap API, to actually getting it to host properly.
+            <h5>Skills Used</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                    <li>File hosting / remote ssh</li>
+                </ul>
         </p>
 
         <div class="dropdown">
@@ -91,6 +180,7 @@
     <script src="./scripts/backtotop.js"></script>
     <script src="./scripts/contact.js"></script>
     <script src="./scripts/nav.js"></script>
+    <script src="./scripts/selector.js"></script>
 </body>
 
 </html>

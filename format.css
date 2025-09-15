@@ -206,7 +206,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    top: 237px;
+    top: 19%;
     right: 10px;
     background-color: #6c7b9c;
     padding: 20px;
@@ -242,4 +242,73 @@ footer {
 #nav-contact:hover {
     background-color: #2b61d6;
     color: white;
+}
+
+
+/* Responsive design for mobile */
+
+
+/* MOBILE FIRST ADJUSTMENTS */
+
+@media (max-width: 768px) {
+    .linktree {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 10px;
+    }
+    .redirects {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .hero-content {
+        flex-direction: column;
+        margin: 10px;
+        text-align: center;
+    }
+    .hero-img img {
+        max-width: 100%;
+        height: auto;
+    }
+    .nav-menu {
+        position: fixed;
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        flex-direction: column;
+        width: 100px;
+        padding: 10px;
+        font-size: 12px;
+    }
+    section {
+        padding: 20px 10px;
+        max-width: 100%;
+    }
+    .interactive-window .nav-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #emailBtn,
+    #linkedinBtn {
+        width: 100%;
+    }
+    .dropdown {
+        width: 100%;
+    }
+    .dropdown-content {
+        width: 100%;
+    }
+    .dropbtn {
+        width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

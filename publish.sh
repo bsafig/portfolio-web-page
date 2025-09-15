@@ -10,5 +10,9 @@ cd scripts
 mput scripts/*
 cd ..
 
+cd meta
+mput meta/*
+cd ..
+
 quit
 EOF

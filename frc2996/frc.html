@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World!!</title>
+    <link rel="stylesheet" href="../format.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="linktree">
+            <h1>Redirects and Downloads</h1>
+            <ul class="redirects">
+                <li><img src="/meta/LinkedIn_icon.svg.webp" width="10"><a href="https://www.linkedin.com/in/benedikt-safigan-cu" target="_blank">LinkedIn</a></li>
+                <li><img src="/meta/Git_icon.svg.png" width="10"><a href="https://github.com/bsafig" target="_blank">GitHub</a></li>
+                <li><img src="/meta/download.png" width="10"><a href="/meta/Safigan.Ben-Resume_Final.docx" download>Resume</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2>FIRST Robotics Competition Team 2996</h2>
+        </section>
+
+        <div class="hero-content-frc">
+            <!-- Bootstrap Carousel -->
+            <div id="smartCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active" data-type="image">
+                        <img src="./carousel-content/2023_img.png" class="d-block w-100" alt="Image 1">
+                    </div>
+
+                    <div class="carousel-item active" data-type="image">
+                        <img src="./carousel-content/2024_img.png" class="d-block w-100" alt="Image 1">
+                    </div>
+
+                    <div class="carousel-item" data-type="video">
+                        <video class="d-block w-100" playsinline muted>
+                        <source src="./carousel-content/auto_2023.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="carousel-item" data-type="video">
+                        <video class="d-block w-100" playsinline muted>
+                        <source src="./carousel-content/auto_2024.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#smartCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#smartCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <p>
+                The FIRST Robotics Competition (FRC) is an international high school robotics program where teams of students design, build, and program industrial-sized robots to compete in complex, game-based engineering challenges. Each season kicks off with a new
+                game reveal, giving teams just six to eight weeks to brainstorm, prototype, and construct a fully functional robot that can complete tasks like scoring game pieces, climbing structures, or cooperating with other robots. The competition
+                blends real-world engineering with fast-paced gameplay, and emphasizes values like teamwork, creativity, and gracious professionalism. Backed by mentors and industry sponsors, FRC gives students hands-on experience with advanced technology
+                and prepares them for careers in STEM and beyond.
+            </p>
+
+            <p>
+                As a member of FRC team 2996 in high school, I took on dual roles as a robotics programmer and the technician on the competition drive team. I developed and maintained robot control systems using Java and WPILib, implementing autonomous routines, driver
+                input handling, and vision-based targeting. On the field, I served as the technician—diagnosing and repairing mechanical, electrical, and software issues under strict time constraints during competitions. This experience sharpened my skills
+                in collaborative problem-solving, real-time debugging, and delivering reliable code and hardware in a high-pressure, team-driven environment.
+            </p>
+
+            <h5>
+                Skills learned
+            </h5>
+            <ul>
+                <li>Java</li>
+                <li>embedded software development</li>
+                <li>autonomous programming</li>
+                <li>performance in high-stakes environments</li>
+                <li>deliver results working on strict time schedules</li>
+                <li>working with a team</li>
+            </ul>
+        </div>
+    </header>
+
+    <footer>
+        <p>© 2025 Safigan.com. All rights and wrongs reserved.</p>
+    </footer>
+
+    <button id="back-to-top-btn">↑ Back to Top</button>
+    <button id="return-btn" href="../index.html">Return to Sender</button>
+
+    <script src="../scripts/backtotop.js"></script>
+    <script src="../scripts/return.js"></script>
+    <script src="../scripts/carousel.js"></script>
+</body>
+
+</html>

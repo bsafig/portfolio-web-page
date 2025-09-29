@@ -14,5 +14,14 @@ cd meta
 mput meta/*
 cd ..
 
+cd frc2996
+mput frc2996/*
+
+cd carousel-content
+mput carousel-content/*
+cd ..
+
+cd ..
+
 quit
 EOF

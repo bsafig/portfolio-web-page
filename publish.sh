@@ -1,4 +1,4 @@
-echo "enter password: "
+echo "Enter FTP password: "
 lftp -u bensafigan@safigan.com ftp.safigan.com <<EOF
 set ssl:verify-certificate no
 
@@ -6,22 +6,11 @@ put index.html
 put format.css
 put README.md
 
-cd scripts
-mput scripts/*
-cd ..
+mirror -R scripts scripts
 
-cd meta
-mput meta/*
-cd ..
+mirror -R meta meta
 
-cd frc2996
-mput frc2996/*
-
-cd carousel-content
-mput carousel-content/*
-cd ..
-
-cd ..
+mirror -R frc2996 frc2996
 
 quit
 EOF

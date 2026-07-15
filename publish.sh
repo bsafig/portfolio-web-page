@@ -4,6 +4,7 @@ set ssl:verify-certificate no
 
 put index.html
 put format.css
+put project.css
 put README.md
 
 mirror -R scripts scripts
@@ -11,6 +12,10 @@ mirror -R scripts scripts
 mirror -R meta meta
 
 mirror -R frc2996 frc2996
+
+mirror -R spotigang spotigang
+
+mirror -R ml-demo ml-demo
 
 quit
 EOF

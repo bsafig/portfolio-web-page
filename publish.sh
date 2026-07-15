@@ -17,5 +17,7 @@ mirror -R spotigang spotigang
 
 mirror -R ml-demo ml-demo
 
+mirror -R terminalmon terminalmon
+
 quit
 EOF

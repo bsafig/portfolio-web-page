@@ -24,7 +24,7 @@ This website was created as a personal project to:
 - **LinkedIn and GitHub links** with icons
 - **Resume download button**
 - **Tabbed interface** for Experience and Skills (Bootstrap nav tabs)
-- **Project section** with links to GitHub repositories
+- **Project card grid** linking to dedicated detail pages for each project
 - **Contact buttons** for easy reach-out
 - **Back to top button** and **floating navigation menu**
 - Hosted live at: `https://ben.safigan.com`
@@ -48,10 +48,14 @@ This website was created as a personal project to:
 
 portfolio-web-page/
 │
-├── index.html # Main HTML file
-├── format.css # Custom styles
+├── index.html # Main HTML file (home + project card grid)
+├── format.css # Custom styles for the home page
+├── project.css # Shared styles for project detail pages
 ├── /meta # Images and resume
-├── /scripts # JS files (dropdown, back-to-top, contact, nav)
+├── /scripts # JS files (back-to-top, contact, nav, return, carousel)
+├── /frc2996 # FRC 2996 project page + media
+├── /spotigang # Spotigang project page
+├── /ml-demo # Machine learning demo project page
 ├── README.md # This file
 ├── publish.sh # Shell script for easily publishing website
 

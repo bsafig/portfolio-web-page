@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vouch</title>
+    <link rel="stylesheet" href="../project.css?v=2" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="linktree">
+            <h1>Redirects and Downloads</h1>
+            <ul class="redirects">
+                <li><img src="/meta/LinkedIn_icon.svg.webp" width="10"><a href="https://www.linkedin.com/in/benedikt-safigan-cu" target="_blank">LinkedIn</a></li>
+                <li><img src="/meta/Git_icon.svg.png" width="10"><a href="https://github.com/bsafig" target="_blank">GitHub</a></li>
+                <li><img src="/meta/download.png" width="10"><a href="/meta/ben_safigan_resume.pdf" download>Resume</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2>Vouch</h2>
+            <p><em>(vouch_ex &mdash; a composable trustworthy-connection library for Elixir &amp; the BEAM)</em></p>
+        </section>
+
+        <div class="hero-content">
+            <p>
+                Vouch is an Elixir library that answers a single question end to end: <em>can I actually trust this connection?</em> Most tooling stops at the TLS handshake. Vouch lets you assemble a complete <em>chain</em> of
+                trust checks &mdash; reachability, secure transport, and data integrity &mdash; that halts the moment trust breaks and tells you exactly which link failed. It exists because no language ecosystem shipped a single,
+                composable library that chains every layer of connection trust; those capabilities lived only as disconnected, single-purpose tools. Vouch fills that gap for the BEAM, and is fully open source and MIT-licensed so
+                it can be of maximum use to real developers who need one library instead of ten.
+            </p>
+
+            <p>
+                The design goal was that every capability works at whatever altitude a developer needs. You can call a single check in isolation, hand-roll a subset with an ordinary <code>with</code> expression, or run the full
+                managed pipeline and get back a structured verdict. The same functional core powers all three, so nothing is locked behind the pipeline &mdash; each core is a plain, testable function with tagged-tuple outputs.
+            </p>
+
+            <h4>The Four Layers of Trust</h4>
+            <ul>
+                <li><strong>Reachability &amp; health</strong> &mdash; DNS resolution, TCP/port reachability, HTTP(S) health checks, and retry/backoff with timeouts.</li>
+                <li><strong>Secure transport</strong> &mdash; TLS handshake with full chain capture, X.509 chain validation, certificate/SPKI pinning, hostname verification, mutual TLS, and OCSP/CRL revocation with <code>nextUpdate</code>-honoring response caching.</li>
+                <li><strong>Data integrity &amp; attestation</strong> &mdash; Content-Digest payload integrity (RFC 9530), HTTP Message Signatures (RFC 9421), response schema validation, and remote-attestation hooks.</li>
+                <li><strong>Composability</strong> &mdash; all of the above assembled as a developer-defined chain of checks, or bundled into a named, reusable trust profile.</li>
+            </ul>
+
+            <h4>How You Use It</h4>
+            <ul>
+                <li><strong>One check, standalone:</strong> capture a peer chain with <code>Vouch.TLS.peer_chain/2</code> and verify a pin with <code>Vouch.Pinning.verify/2</code> &mdash; no pipeline required.</li>
+                <li><strong>A hand-rolled subset:</strong> compose exactly the checks you want inside a plain <code>with</code> expression that short-circuits on the first failure.</li>
+                <li><strong>The full managed pipeline:</strong> pipe a host through <code>connect |> resolvable |> reachable |> http_healthy |> tls_handshake |> pinning |> ocsp |> report</code> and receive a <code>%Vouch.Report{}</code> with a per-link verdict.</li>
+                <li><strong>A reusable trust profile:</strong> <code>use Vouch.Profile</code> to declare a named policy (e.g. a bank-grade trust chain) that any host can be verified against.</li>
+            </ul>
+
+            <h4>Architecture</h4>
+            <ul>
+                <li>Modeled as "Plug, but for connection trust": every check is a <strong>functional core</strong> (plain functions, no pipeline knowledge) paired with a thin <strong>pipeline adapter</strong> implementing the <code>Vouch.Check</code> behaviour.</li>
+                <li>The <code>Vouch.Chain</code> runner threads an immutable <code>Vouch.Context</code> through the steps with <code>Enum.reduce_while/3</code>, short-circuiting at the first error.</li>
+                <li>Stateful concerns like OCSP/CRL caching live in supervised GenServers under <code>Vouch.Application</code>, so revocation responses are validated end to end and cached until their <code>nextUpdate</code>.</li>
+                <li>Every check emits <code>[:vouch, :check, :start | :stop | :exception]</code> telemetry with host, port, and halt metadata, so results feed straight into existing dashboards.</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="https://github.com/bsafig/vouch_ex" target="_blank">View on GitHub &rarr;</a>
+            </div>
+
+            <h5>Skills Used</h5>
+            <ul class="skill-tags">
+                <li>Elixir</li>
+                <li>BEAM / OTP</li>
+                <li>Library Design</li>
+                <li>TLS &amp; PKI</li>
+                <li>X.509</li>
+                <li>OCSP &amp; CRL Revocation</li>
+                <li>RFC 9421 / RFC 9530</li>
+                <li>Cryptography</li>
+                <li>GenServer</li>
+                <li>Telemetry</li>
+                <li>Hex Packaging</li>
+                <li>ExDoc</li>
+                <li>Property-Based Testing</li>
+                <li>Git</li>
+                <li>Open Source</li>
+            </ul>
+        </div>
+    </header>
+
+    <footer>
+        <p>© 2025 Safigan.com. All rights and wrongs reserved.</p>
+    </footer>
+
+    <button id="back-to-top-btn">↑ Back to Top</button>
+    <button id="return-btn" href="../index.html">Return to Sender</button>
+
+    <script src="../scripts/backtotop.js"></script>
+    <script src="../scripts/return.js"></script>
+</body>
+
+</html>

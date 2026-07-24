@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vouch Monitor</title>
+    <link rel="stylesheet" href="../project.css?v=2" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="linktree">
+            <h1>Redirects and Downloads</h1>
+            <ul class="redirects">
+                <li><img src="/meta/LinkedIn_icon.svg.webp" width="10"><a href="https://www.linkedin.com/in/benedikt-safigan-cu" target="_blank">LinkedIn</a></li>
+                <li><img src="/meta/Git_icon.svg.png" width="10"><a href="https://github.com/bsafig" target="_blank">GitHub</a></li>
+                <li><img src="/meta/download.png" width="10"><a href="/meta/ben_safigan_resume.pdf" download>Resume</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2>Vouch Monitor</h2>
+            <p><em>(a real-time Phoenix LiveView trust monitor built on the Vouch library)</em></p>
+        </section>
+
+        <div class="hero-content">
+            <p>
+                Vouch Monitor is a real-time <strong>trust monitor</strong> built with Phoenix LiveView that continuously runs the <a href="../vouch_ex/index.html">Vouch</a> trust chain against your endpoints &mdash;
+                reachability, TLS handshake, and certificate pinning &mdash; and renders a live, per-check verdict for each. It plays two roles at once: it is a full <strong>showcase</strong> for what Vouch can do, and a
+                continuous <strong>exercise harness</strong> that drives the library the way real developers would use it in production. Rather than a one-shot script, it keeps many real-world hosts under constant observation,
+                pushing Vouch's cache, retry, and certificate-handling paths far harder than a single check ever could.
+            </p>
+
+            <p>
+                The point of the project is fidelity to real usage. Every design decision mirrors how connection trust actually gets consumed in a running system: a supervised process per target, structured per-link verdicts
+                instead of bare booleans, results pushed to the browser over PubSub, and a CI gate that fails a build the moment an endpoint's trust regresses.
+            </p>
+
+            <h4>What It Demonstrates</h4>
+            <ul>
+                <li><strong>Composable trust in action</strong> &mdash; each target runs a Vouch chain (<code>reachable |> tls_handshake |> pinning</code>) and reports a structured, per-link verdict rather than a single pass/fail bit.</li>
+                <li><strong>Idiomatic OTP</strong> &mdash; one supervised <code>Poller</code> GenServer per target under a <code>DynamicSupervisor</code>, with results broadcast over <code>Phoenix.PubSub</code> and rendered live in the dashboard.</li>
+                <li><strong>Continuous, realistic testing</strong> &mdash; running against many live hosts exercises Vouch's caching, retry, and cert-handling code paths under conditions that mirror production, not fixtures.</li>
+            </ul>
+
+            <h4>Architecture</h4>
+            <ul>
+                <li><code>VouchMonitor.Monitoring</code> is a context facade for adding, removing, listing, and subscribing to monitored targets.</li>
+                <li>A <code>Registry</code> maps each target id to its poller pid; a <code>PollerSupervisor</code> (<code>DynamicSupervisor</code>) owns the pollers.</li>
+                <li>Each <code>Poller</code> ticks on an interval, runs the Vouch chain, and broadcasts a <code>Vouch.Report</code> snapshot; <code>VouchMonitorWeb.DashboardLive</code> renders those snapshots in real time.</li>
+                <li>Default targets are seeded on boot and configurable; new targets can be added straight from the dashboard.</li>
+            </ul>
+
+            <h4>CI Trust Gate</h4>
+            <ul>
+                <li>A <code>mix vouch.gate</code> Mix task fails a build when an endpoint's connection trust regresses, and accepts per-host overrides (<code>--host api.github.com --host hex.pm</code>).</li>
+                <li>Gate targets are configured under <code>:gate_targets</code>, and a scheduled GitHub Actions workflow runs the gate daily so trust regressions surface on their own.</li>
+                <li>Assets (Tailwind and esbuild) build through <code>mix setup</code> with no Node.js required, keeping the whole stack self-contained.</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="https://github.com/bsafig/vouch_monitor" target="_blank">View on GitHub &rarr;</a>
+                <a class="secondary" href="../vouch_ex/index.html">See the Vouch library</a>
+            </div>
+
+            <h5>Skills Used</h5>
+            <ul class="skill-tags">
+                <li>Elixir</li>
+                <li>Phoenix</li>
+                <li>Phoenix LiveView</li>
+                <li>OTP</li>
+                <li>GenServer</li>
+                <li>DynamicSupervisor</li>
+                <li>Phoenix.PubSub</li>
+                <li>Real-Time UI</li>
+                <li>Tailwind CSS</li>
+                <li>Mix Tasks</li>
+                <li>GitHub Actions</li>
+                <li>CI/CD</li>
+                <li>Telemetry</li>
+                <li>Git</li>
+                <li>Open Source</li>
+            </ul>
+        </div>
+    </header>
+
+    <footer>
+        <p>© 2025 Safigan.com. All rights and wrongs reserved.</p>
+    </footer>
+
+    <button id="back-to-top-btn">↑ Back to Top</button>
+    <button id="return-btn" href="../index.html">Return to Sender</button>
+
+    <script src="../scripts/backtotop.js"></script>
+    <script src="../scripts/return.js"></script>
+</body>
+
+</html>

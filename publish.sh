@@ -17,6 +17,10 @@ mirror -R spotigang spotigang
 
 mirror -R ml-demo ml-demo
 
+mirror -R vouch_ex vouch_ex
+
+mirror -R vouch_monitor vouch_monitor
+
 mirror -R terminalmon terminalmon
 
 quit

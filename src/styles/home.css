@@ -1,49 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Home-page-specific styles. Scoped under .page-home so the home hero card
+   (a photo + text flex row) never collides with the project-page hero card. */
 
-body {
-    font-family: 'Calibri', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-h1,
-h2,
-h3 {
-    color: #104f82;
-}
-
-.linktree {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    background: #333;
-    color: #fff;
-}
-
-.redirects {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.redirects a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.hero {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.hero-content {
+.page-home .hero-content {
     background-color: #b7e1f7;
     color: #333;
     padding: 20px;
@@ -56,29 +14,6 @@ h3 {
     margin-left: 15%;
     margin-right: 15%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #f04e23;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
 
 
@@ -144,27 +79,6 @@ footer {
 }
 
 
-/* back to top button */
-
-#back-to-top-btn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    font-size: 16px;
-    background: #104f82;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#back-to-top-btn:hover {
-    background: #2b61d6;
-}
-
-
 /* Contact section buttons */
 
 .contact-buttons {
@@ -210,15 +124,7 @@ footer {
     width: 150px;
 }
 
-
-/* Navigation buttons */
-
-#nav-linktree,
-#nav-about,
-#nav-experience,
-#nav-skills,
-#nav-projects,
-#nav-contact {
+.nav-menu button {
     background-color: #b7e1f7;
     color: black;
     padding: 5px;
@@ -228,35 +134,16 @@ footer {
     border-radius: 5px;
 }
 
-#nav-linktree:hover,
-#nav-about:hover,
-#nav-experience:hover,
-#nav-skills:hover,
-#nav-projects:hover,
-#nav-contact:hover {
+.nav-menu button:hover {
     background-color: #2b61d6;
     color: white;
 }
 
 
-/* Responsive design for mobile */
-
-
-/* MOBILE FIRST ADJUSTMENTS */
+/* Home mobile adjustments */
 
 @media (max-width: 768px) {
-    .linktree {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        gap: 10px;
-    }
-    .redirects {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .hero-content {
+    .page-home .hero-content {
         flex-direction: column;
         margin: 10px;
         text-align: center;
@@ -264,20 +151,6 @@ footer {
     .hero-img img {
         max-width: 100%;
         height: auto;
-    }
-    .nav-menu {
-        position: fixed;
-        top: auto;
-        bottom: 10px;
-        right: 10px;
-        flex-direction: column;
-        width: 100px;
-        padding: 10px;
-        font-size: 12px;
-    }
-    section {
-        padding: 20px 10px;
-        max-width: 100%;
     }
     .interactive-window .nav-tabs {
         flex-wrap: wrap;
@@ -296,22 +169,12 @@ footer {
     }
     .nav-menu {
         position: fixed;
+        top: auto;
         bottom: 60px;
         right: 10px;
+        flex-direction: column;
         width: auto;
         padding: 10px;
+        font-size: 12px;
     }
-    #back-to-top-btn {
-        bottom: 10px;
-        right: 10px;
-    }
-    #return-btn {
-        bottom: 10px;
-        right: 10px;
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }

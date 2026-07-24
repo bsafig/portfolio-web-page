@@ -1,0 +1,10 @@
+# SPA fallback: serve real files/dirs as-is, otherwise hand every route to
+# index.html so React Router can resolve it on a deep link or page refresh.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

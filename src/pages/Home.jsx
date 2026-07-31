@@ -11,6 +11,41 @@ const experiencePanel = (
     <h3>My Work Experience and History</h3>
     <h4>Professional Experience</h4>
 
+    <h5>GovWorx</h5>
+    <p><em>Software Engineer (Contractor)</em></p>
+    <p><em>Jun 2026-Present</em></p>
+    <p>
+      Contributed to GovWorxDataAgent, an on-premises .NET service that captures real-time 911
+      emergency-services data (calls, dispatch, and location) and streams it to a cloud AI platform.
+    </p>
+    <ul>
+      <li>
+        Designed and shipped three CAD (Computer-Aided Dispatch) connectors from scratch: a Mark43
+        REST API connector, an IMC connector over Actian Zen ODBC, and a CentralSquare OneSolution
+        XML connector. I owned the schema mapping, query logic, and configuration for each.
+      </li>
+      <li>
+        Extended and hardened existing connectors for public-safety vendors such as Tyler,
+        Versaterm, Hexagon, and Spillman, working across SQL Server, Oracle, Informix, ODBC, REST,
+        and XML data sources.
+      </li>
+      <li>
+        Diagnosed and fixed production issues under time pressure, including a Hexagon query failure,
+        cursor preservation on failed pulls to prevent data loss, and clearer logging of unclean
+        agent shutdowns.
+      </li>
+      <li>
+        Shipped 50+ Linear-tracked issues across 170+ commits through a reviewed pull-request
+        workflow, covering backfill reliability, timezone-correctness fixes, and per-connector
+        telemetry.
+      </li>
+      <li>
+        Built a full-stack connectivity and firewall-diagnostics tool with a React and TypeScript
+        frontend and an ASP.NET Core API, and instrumented connectors with OpenTelemetry and Datadog
+        metrics.
+      </li>
+    </ul>
+
     <h5>Exact Assembly</h5>
     <p><em>Software Engineering Intern</em></p>
     <p><em>May-Aug 2023</em></p>
@@ -40,22 +75,35 @@ const skillsPanel = (
 
     <h5>Technical Skills</h5>
     <ul>
-      <li>Git</li>
-      <li>C</li>
-      <li>C++</li>
+      <li>C#</li>
+      <li>.NET</li>
+      <li>ASP.NET Core</li>
+      <li>SQL</li>
+      <li>TypeScript</li>
+      <li>React</li>
+      <li>REST API Integration</li>
+      <li>System Integration</li>
+      <li>Data Pipelines / ETL</li>
+      <li>Entity Framework Core</li>
+      <li>Observability (OpenTelemetry &amp; Datadog)</li>
+      <li>Quartz.NET (Job Scheduling)</li>
+      <li>Docker</li>
       <li>Java</li>
+      <li>C++</li>
+      <li>C</li>
       <li>Python</li>
-      <li>Software Construction</li>
-      <li>Software Design</li>
-      <li>Software Development</li>
+      <li>JavaScript</li>
+      <li>Git</li>
+      <li>XML</li>
       <li>HTML</li>
       <li>CSS</li>
-      <li>SQL</li>
-      <li>JavaScript</li>
       <li>Bootstrap</li>
-      <li>Secure Shell</li>
-      <li>GNU Debugger</li>
+      <li>Software Design</li>
+      <li>Software Construction</li>
+      <li>Software Development</li>
       <li>Shell Scripting</li>
+      <li>GNU Debugger</li>
+      <li>Secure Shell</li>
       <li>cPanel</li>
       <li>FTP</li>
       <li>Hardware Architecture</li>

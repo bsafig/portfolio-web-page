@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
-# Remove files left on the server by the old static-site deploy.
-#
-# The React publish.sh overwrites the current files but does not prune the
-# pre-React leftovers (loose CSS, scripts/, and the old per-project HTML dirs).
-# This deletes exactly those, keeping everything the React build needs:
-# index.html, assets/, .htaccess, meta/, and frc2996/carousel-content/.
-# Idempotent — run once after the first React deploy.
 set -e
 
 echo "Enter FTP password: "

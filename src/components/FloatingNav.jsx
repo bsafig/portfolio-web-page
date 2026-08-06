@@ -19,6 +19,7 @@ export default function FloatingNav({ onSelectTab }) {
       <button id="nav-experience" onClick={() => goTo('experience')}>Experience</button>
       <button id="nav-skills" onClick={() => goTo('skills')}>Skills</button>
       <button id="nav-projects" onClick={() => scrollToId('projects')}>Projects</button>
+      <button id="nav-recommendations" onClick={() => scrollToId('recommendations')}>Recommendations</button>
       <button id="nav-contact" onClick={() => scrollToId('contact')}>Contact</button>
     </div>
   )

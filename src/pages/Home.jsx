@@ -4,6 +4,7 @@ import Linktree from '../components/Linktree.jsx'
 import Tabs from '../components/Tabs.jsx'
 import FloatingNav from '../components/FloatingNav.jsx'
 import BackToTop from '../components/BackToTop.jsx'
+import Recommendations from '../components/Recommendations.jsx'
 import { projects } from '../data/projects.js'
 
 const experiencePanel = (
@@ -216,6 +217,8 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      <Recommendations />
 
       <section id="contact">
         <h2>Contact Me</h2>

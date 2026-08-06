@@ -128,10 +128,14 @@
     background-color: #b7e1f7;
     color: black;
     padding: 5px;
-    font-size: 14px;
+    font-size: 13px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .nav-menu button:hover {
@@ -176,5 +180,144 @@
         width: auto;
         padding: 10px;
         font-size: 12px;
+    }
+}
+
+
+/* Recommendations section */
+
+.reco-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.reco-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 340px;
+    max-width: 480px;
+    background-color: #fff;
+    color: #333;
+    padding: 28px 28px 22px;
+    border-radius: 16px;
+    border: 1px solid rgba(16, 79, 130, 0.12);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.reco-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(16, 79, 130, 0.18);
+}
+
+.reco-quote {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 0 20px 0;
+    padding: 28px 0 0 0;
+    border: none;
+}
+
+.reco-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -6px;
+    left: -4px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 64px;
+    line-height: 1;
+    color: #104f82;
+    opacity: 0.18;
+}
+
+.reco-quote p {
+    color: #333;
+    line-height: 1.65;
+    margin: 0 0 12px 0;
+}
+
+.reco-quote p:last-child {
+    margin-bottom: 0;
+}
+
+.reco-attribution {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 18px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(16, 79, 130, 0.12);
+    text-align: left;
+}
+
+.reco-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.reco-avatar-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #104f82;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.reco-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reco-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #104f82;
+}
+
+.reco-title {
+    font-size: 13px;
+    color: #555;
+}
+
+.reco-relationship {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.reco-date {
+    font-size: 12px;
+    color: #888;
+}
+
+.reco-cta {
+    margin-top: 16px;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 14px;
+    color: #104f82;
+}
+
+a.reco-card:hover .reco-cta {
+    color: #2b61d6;
+}
+
+/* Mobile adjustments for recommendations */
+
+@media (max-width: 768px) {
+    .reco-card {
+        flex-basis: 100%;
+        max-width: 100%;
     }
 }

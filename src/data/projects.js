@@ -19,6 +19,13 @@ export const projects = [
     tags: ['Elixir', 'Phoenix LiveView', 'OTP', 'Real-Time UI'],
   },
   {
+    slug: 'clockless-mutex',
+    title: 'Clockless Mutex',
+    blurb:
+      'A from-scratch C++ implementation of Lamport logical clocks and distributed mutual exclusion — threaded processes coordinating over an unreliable, message-passing network with no shared clock.',
+    tags: ['C++', 'Distributed Systems', 'Concurrency', 'Lamport Clocks'],
+  },
+  {
     slug: 'terminalmon',
     title: 'TerminalMon',
     blurb:

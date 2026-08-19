@@ -2,6 +2,7 @@ import { Routes, Route, Navigate, useParams } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Vouch from './pages/projects/Vouch.jsx'
 import VouchMonitor from './pages/projects/VouchMonitor.jsx'
+import ClocklessMutex from './pages/projects/ClocklessMutex.jsx'
 import TerminalMon from './pages/projects/TerminalMon.jsx'
 import Spotigang from './pages/projects/Spotigang.jsx'
 import Frc2996 from './pages/projects/Frc2996.jsx'
@@ -11,6 +12,7 @@ import MlDemo from './pages/projects/MlDemo.jsx'
 const PROJECT_PAGES = {
   vouch: Vouch,
   'vouch-monitor': VouchMonitor,
+  'clockless-mutex': ClocklessMutex,
   terminalmon: TerminalMon,
   spotigang: Spotigang,
   frc2996: Frc2996,

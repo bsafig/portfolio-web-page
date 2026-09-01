@@ -5,6 +5,13 @@
 
 export const projects = [
   {
+    slug: 'accelerated-image-processing',
+    title: 'Accelerated Image Processing',
+    blurb:
+      'A C++ command-line tool that runs a pipeline of GPU-accelerated image filters in OpenCL and benchmarks each one against a CPU baseline, showing where GPU offloading does and does not pay off.',
+    tags: ['OpenCL', 'C++', 'GPU Computing', 'Benchmarking'],
+  },
+  {
     slug: 'vouch',
     title: 'Vouch',
     blurb:

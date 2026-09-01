@@ -92,6 +92,9 @@ const skillsPanel = (
       <li>Java</li>
       <li>C++</li>
       <li>C</li>
+      <li>OpenCL</li>
+      <li>GPU Computing</li>
+      <li>Parallel Programming</li>
       <li>Python</li>
       <li>JavaScript</li>
       <li>Git</li>

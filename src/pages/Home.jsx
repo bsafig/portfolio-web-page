@@ -166,12 +166,9 @@ export default function Home() {
           <div className="hero-txt">
             <p>
               Hello, my name is Benedikt Safigan, and I am a driven future software architect and engineer
-              studying at the University of Colorado Boulder. My current focus includes Python, SQL, machine
-              learning, and web development, while my foundation is built on experience with C, C++, and Java.
-              Outside of coursework, I enjoy applying my skills to practical projects—most recently, I am
-              planning an embedded software project to develop a sprinkler system for my family. I am actively
-              seeking an internship opportunity where I can contribute, grow, and continue building my expertise.
-              If you would like to connect, please feel free to <a href="#contact">reach out here</a>.
+              studying at the University of Colorado Boulder. I am working towards a computer engineering minor and my current focus is on systems and distributed engineering. I like working close to the hardware on the hard problems underneath
+              the surface. Concurrency, performance, and real-time systems that have to stay correct under
+              load all interest me. If you would like to connect, please feel free to <a href="#contact">reach out here</a>.
             </p>
           </div>
         </div>

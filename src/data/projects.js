@@ -12,6 +12,13 @@ export const projects = [
     tags: ['OpenCL', 'C++', 'GPU Computing', 'Benchmarking'],
   },
   {
+    slug: 'clockless-mutex',
+    title: 'Clockless Mutex',
+    blurb:
+      'A from-scratch C++ implementation of Lamport logical clocks and distributed mutual exclusion — threaded processes coordinating over an unreliable, message-passing network with no shared clock.',
+    tags: ['C++', 'Distributed Systems', 'Concurrency', 'Lamport Clocks'],
+  },
+  {
     slug: 'vouch',
     title: 'Vouch',
     blurb:
@@ -24,13 +31,6 @@ export const projects = [
     blurb:
       'A real-time Phoenix LiveView trust monitor that continuously runs the Vouch chain against live endpoints and shows per-check verdicts.',
     tags: ['Elixir', 'Phoenix LiveView', 'OTP', 'Real-Time UI'],
-  },
-  {
-    slug: 'clockless-mutex',
-    title: 'Clockless Mutex',
-    blurb:
-      'A from-scratch C++ implementation of Lamport logical clocks and distributed mutual exclusion — threaded processes coordinating over an unreliable, message-passing network with no shared clock.',
-    tags: ['C++', 'Distributed Systems', 'Concurrency', 'Lamport Clocks'],
   },
   {
     slug: 'terminalmon',
@@ -59,6 +59,13 @@ export const projects = [
     blurb:
       'Applied machine learning demo predicting stock prices and Stanley Cup winners, with a C++ data-prep tool.',
     tags: ['Python', 'scikit-learn', 'pandas', 'C++'],
+  },
+  {
+    slug: 'fpga-pipelined-adder',
+    title: 'FPGA Pipelined Adder',
+    blurb:
+      'A Verilog project comparing pipelined vs. non-pipelined 16-bit adder designs, simulated with iVerilog and visualized with GTKWave.',
+    tags: ['Verilog', 'FPGA Design', 'Digital Logic', 'Hardware Simulation'],
   },
   {
     slug: 'this-website',

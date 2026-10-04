@@ -8,6 +8,7 @@ import Spotigang from './pages/projects/Spotigang.jsx'
 import Frc2996 from './pages/projects/Frc2996.jsx'
 import MlDemo from './pages/projects/MlDemo.jsx'
 import AcceleratedImageProcessing from './pages/projects/AcceleratedImageProcessing.jsx'
+import FpgaPipelinedAdder from './pages/projects/FpgaPipelinedAdder.jsx'
 
 // slug (from src/data/projects.js) -> detail page component.
 const PROJECT_PAGES = {
@@ -19,6 +20,7 @@ const PROJECT_PAGES = {
   frc2996: Frc2996,
   'ml-demo': MlDemo,
   'accelerated-image-processing': AcceleratedImageProcessing,
+  'fpga-pipelined-adder': FpgaPipelinedAdder,
 }
 
 function ProjectRoute() {

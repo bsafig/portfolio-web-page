@@ -5,6 +5,13 @@
 
 export const projects = [
   {
+    slug: 'blitzsort',
+    title: 'BlitzSort',
+    blurb:
+      'Cache-conscious quicksort optimization demonstrating 128x speedup on worst-case data through median-of-three pivot selection, insertion-sort thresholds, and tail recursion — showing why hardware awareness beats algorithmic complexity.',
+    tags: ['C++', 'Performance Optimization', 'CPU Cache', 'Algorithms'],
+  },
+  {
     slug: 'accelerated-image-processing',
     title: 'Accelerated Image Processing',
     blurb:

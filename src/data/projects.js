@@ -5,6 +5,13 @@
 
 export const projects = [
   {
+    slug: 'order-me-this',
+    title: 'order-me-this',
+    blurb:
+      'A minimal limit order book comparing three data structure approaches — std::map, unordered_map, and sorted deque — revealing a 3.7x latency win for cache-conscious matching in the hot path, demonstrating why hardware design matters in trading systems.',
+    tags: ['C++', 'Data Structures', 'Performance Optimization', 'Systems Design'],
+  },
+  {
     slug: 'blitzsort',
     title: 'BlitzSort',
     blurb:

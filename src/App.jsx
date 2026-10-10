@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate, useParams } from 'react-router-dom'
 import Home from './pages/Home.jsx'
+import OrderMeThis from './pages/projects/OrderMeThis.jsx'
 import Blitzsort from './pages/projects/Blitzsort.jsx'
 import Vouch from './pages/projects/Vouch.jsx'
 import VouchMonitor from './pages/projects/VouchMonitor.jsx'
@@ -13,6 +14,7 @@ import FpgaPipelinedAdder from './pages/projects/FpgaPipelinedAdder.jsx'
 
 // slug (from src/data/projects.js) -> detail page component.
 const PROJECT_PAGES = {
+  'order-me-this': OrderMeThis,
   blitzsort: Blitzsort,
   vouch: Vouch,
   'vouch-monitor': VouchMonitor,

@@ -119,6 +119,24 @@ const skillsPanel = (
       <li>cPanel</li>
       <li>FTP</li>
       <li>Hardware Architecture</li>
+      <li>Embedded Firmware</li>
+      <li>Control Systems</li>
+      <li>PID Control</li>
+      <li>Real-Time Systems</li>
+      <li>Distributed Systems</li>
+      <li>Concurrency &amp; Multithreading</li>
+      <li>Performance Optimization</li>
+      <li>Data Structures &amp; Algorithms</li>
+      <li>CPU Cache &amp; Memory Hierarchy</li>
+      <li>Benchmarking &amp; Profiling</li>
+      <li>Systems Design</li>
+      <li>Linux</li>
+      <li>Make / Makefile</li>
+      <li>Elixir</li>
+      <li>Phoenix LiveView</li>
+      <li>OTP / BEAM</li>
+      <li>TLS &amp; PKI</li>
+      <li>PyPI / Python Packaging</li>
     </ul>
 
     <h5>Organizational Skills</h5>

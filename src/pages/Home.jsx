@@ -48,12 +48,20 @@ const experiencePanel = (
     </ul>
 
     <h5>Exact Assembly</h5>
-    <p><em>Software Engineering Intern</em></p>
+    <p><em>Firmware Engineering Intern</em></p>
     <p><em>May-Aug 2023</em></p>
     <ul>
-      <li>Collaborated with a team to develop software solutions for a tech contracting startup.</li>
-      <li>Assisted in troubleshooting and debugging software applications.</li>
-      <li>Gained hands-on experience in software engineering and development processes.</li>
+      <li>
+        Developed and debugged embedded firmware for control systems at a tech contracting startup.
+      </li>
+      <li>
+        Implemented and tuned PID control loops to achieve stable, responsive closed-loop behavior
+        on real hardware.
+      </li>
+      <li>
+        Collaborated with the engineering team to integrate, test, and validate firmware against
+        system requirements.
+      </li>
     </ul>
 
     <h4>Related Experience</h4>
